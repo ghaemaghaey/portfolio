@@ -1,0 +1,18 @@
+{$SITE_ADDR::8090} {
+	root * {$SITE_ROOT:.}
+	encode zstd gzip
+
+	@assets {
+		path *.css *.js *.woff2 *.jpg *.png *.svg
+	}
+	header @assets Cache-Control "public, max-age=2592000, immutable"
+
+	header /robots.txt Cache-Control "public, max-age=86400"
+	header /sitemap.xml Cache-Control "public, max-age=86400"
+
+	header X-Content-Type-Options nosniff
+	header Referrer-Policy strict-origin-when-cross-origin
+	header X-Frame-Options SAMEORIGIN
+
+	file_server
+}

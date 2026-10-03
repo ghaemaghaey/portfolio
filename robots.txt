@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# --- IA ---
+Sitemap: https://ghaemghh.ir/sitemap.xml
+
+# --- Name entity (helps crawlers associate the page with the person) ---
+# Ghaem Aghaei Aghdam | قائم آقائی اقدم | Ghaem Ghh | ghaemaghaey

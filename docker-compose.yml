@@ -1,0 +1,11 @@
+services:
+  portfolio:
+    build: .
+    image: ghaem-portfolio:latest
+    container_name: ghaem-portfolio
+    environment:
+      SITE_ADDR: ":80"
+      SITE_ROOT: /srv
+    ports:
+      - "8090:80"
+    restart: unless-stopped
